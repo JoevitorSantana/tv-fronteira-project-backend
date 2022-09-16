@@ -2,7 +2,10 @@ node_modules
 
 .env
 
-tmp/avatar*/*
+tmp/*
+!tmp/.gitkeep
+
+tmp/avatar/*
 !tmp/avatar/.gitkeep
 
 tmp/computers/*

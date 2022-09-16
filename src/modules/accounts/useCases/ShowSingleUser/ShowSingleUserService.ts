@@ -2,7 +2,6 @@ import { inject, injectable } from "tsyringe";
 import { UserClass } from "../../../../models/User";
 import { AppError } from "../../../../shared/errors/AppError";
 import { IUserReponseDTO } from "../../dtos/IUsersReponseDTO";
-import { UserMap } from "../../mapper/UserMap";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 
 @injectable()

@@ -40,7 +40,7 @@ export class CreateComputerService {
 
         await this.storageProvider.save(imageUrl, "computers");
 
-        const url = `http://localhost:3333/computers/${imageUrl}`
+        const url = `${process.env.APP_URL}/computers/${imageUrl}`
 
         await this.computerRepository.create({
             description, memory, processor, storage, user, value, videoCard, imageUrl: url

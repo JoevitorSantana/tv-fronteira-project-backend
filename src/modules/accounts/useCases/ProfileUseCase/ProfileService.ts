@@ -71,7 +71,7 @@ export class ProfileService{
         await this.storageProvider.save(avatar_file, "avatar");
 
         user.avatar = avatar_file;
-        user.avatarUrl = `http://localhost:3333/avatar/${avatar_file}`;
+        user.avatarUrl = `${process.env.APP_URL}/avatar/${avatar_file}`;
 
         await this.usersRepository.save(user, _id);
     }

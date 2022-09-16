@@ -12,7 +12,7 @@ export class ComputerImagesRepository implements IComputerImagesRepository{
     
     async create(computer: string, imageUrl: string[]): Promise<void> {
         
-        const formatedUrl = `http://localhost:3333/computers/${imageUrl}`        
+        const formatedUrl = `${process.env.APP_URL}/computers/${imageUrl}`        
 
         await ComputerImages.findByIdAndUpdate({
             _id: computer, imageUrl: formatedUrl

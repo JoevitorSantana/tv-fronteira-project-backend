@@ -2,14 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
-    "start": "node build/server.js",
+    "start": "node build/shared/infra/http/server.js",
     "postinstall": "tsc"
   },
   "dependencies": {
